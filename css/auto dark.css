@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #0059ff;
+    --red: #e74c3c;
+    --orange: #f39c12;
+    --light-color: #000000;
+    --light-bg: #eee;
+    --black: #000000;
+    --white: #ffffff;
+    --border: .1rem solid rgba(0, 0, 0, 0.2);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: url(mouse.cur), auto;
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+    height: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--black);
+    padding-left: 30rem;
+}
+
+/* Automatic dark mode styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-color: #ffffff; /* Light color for text */
+        --light-bg: #000000; /* Dark background */
+        --black: #ffffff; /* Text color */
+        --white: #222222; /* White color for elements */
+        --border: .1rem solid rgba(255, 255, 255, 0.2); /* Light border */
+    }
+
+    body {
+        background-color: var(--light-bg);
+        color: var(--black);
+        padding-left: 30rem; /* You can adjust this padding as needed */
+    }
+}
+
+body.active {
+    padding-left: 0;
+}
+
+section {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+    border-bottom: var(--border);
+    padding-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+/* Add the rest of your existing styles here... */

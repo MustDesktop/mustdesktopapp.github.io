@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
-:root {
-    --main-color: #0059ff;
-    --red: #e74c3c;
-    --orange: #f39c12;
-    --light-color: #000000;
-    --light-bg: #eee;
-    --black: #000000;
-    --white: #ffffff;
-    --border: .1rem solid rgba(0, 0, 0, 0.2);
+
+:root{
+   --main-color:#0059ff;
+   --red:#e74c3c;
+   --orange:#f39c12;
+   --light-color:#000000;
+   --light-bg:#eee;
+   --black:#000000;
+   --white:#ffffff;
+   --border:.1rem solid rgba(0, 0, 0, 0.2);
 }
 
+/*:root{
+   --main-color:#0059ff;
+   --red:#e74c3c;
+   --orange:#f39c12;
+   --light-color:#888;
+   --light-bg:#eee;
+   --black:#2c3e50;
+   --white:#fff;
+   --border:.1rem solid rgba(0,0,0,.2);
+}*/
 *{
    font-family: 'Nunito', sans-serif;
    margin:0; padding:0;
@@ -52,43 +63,40 @@ body{
    padding-left: 30rem;
 }
 
-/* Automatic dark mode styles */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --light-color: #ffffff; /* Light color for text */
-        --light-bg: #000000; /* Dark background */
-        --black: #ffffff; /* Text color */
-        --white: #222222; /* White color for elements */
-        --border: .1rem solid rgba(255, 255, 255, 0.2); /* Light border */
-    }
-
-    body {
-        background-color: var(--light-bg);
-        color: var(--black);
-        padding-left: 30rem; /* You can adjust this padding as needed */
-    }
+body.dark{
+   --light-color:#ffffff;
+   --light-bg:#000000;
+   --black:#fff;
+   --white:#222222;
+   --border:.1rem solid rgba(0, 0, 0, 0.2);
+}
+/*
+body.dark{
+   --light-color:#aaa;
+   --light-bg:#333;
+   --black:#fff;
+   --white:#222;
+   --border:.1rem solid rgba(255,255,255,.2);
+} */
+body.active{
+   padding-left: 0;
 }
 
-body.active {
-    padding-left: 0;
+section{
+   padding:1rem;
+   margin: 0 auto;
+   max-width: 1200px;
 }
 
-section {
-    padding: 1rem;
-    margin: 0 auto;
-    max-width: 1200px;
+.heading{
+   font-size: 2.5rem;
+   color:var(--black);
+   margin-bottom: 2.5rem;
+   border-bottom: var(--border);
+   padding-bottom: 1.5rem;
+   text-transform: capitalize;
 }
 
-.heading {
-    font-size: 2.5rem;
-    color: var(--black);
-    margin-bottom: 2.5rem;
-    border-bottom: var(--border);
-    padding-bottom: 1.5rem;
-    text-transform: capitalize;
-}
-
-/* Add the rest of your existing styles here... */
 .inline-btn,
 .inline-option-btn,
 .inline-delete-btn,
@@ -773,7 +781,7 @@ border-bottom-right-radius: 2.5rem;
 
 .watch-video .video-container{
    background-color: var(--white);
-   border-radius: 2.5rem;
+   border-radius: .5rem;
    padding: 2rem;
 }
 
@@ -887,7 +895,7 @@ border-bottom-right-radius: 2.5rem;
 
 .comments .add-comment{
    background-color: var(--white);
-   border-radius: 2.5rem;
+   border-radius: .5rem;
    padding: 2rem;
    margin-bottom: 3rem;
 }
@@ -1107,7 +1115,7 @@ border-bottom-right-radius: 2.5rem;
 
 .user-profile .info{
    background-color: var(--white);
-   border-radius: 2.5rem;
+   border-radius: .5rem;
    padding: 2rem;
 }
 
@@ -1144,7 +1152,7 @@ border-bottom-right-radius: 2.5rem;
 
 .user-profile .info .box-container .box{
    background-color: var(--light-bg);
-   border-radius: 2.5rem;
+   border-radius: .5rem;
    padding: 2rem;
    flex: 1 1 25rem;
 }
@@ -1791,94 +1799,4 @@ h1 {
 
 .file-item a:hover {
    text-decoration: underline;
-}
-
-/*calc*/
-
-button { 
-	margin-top: 15px; 
-	padding: 12px 20px; 
-	background-color: var(--main-color); 
-	color: #fff; 
-	border: none; 
-	border-radius: 2.5rem; 
-	cursor: pointer; 
-	font-size: 14px;
-	display: inline-block; 
-    transition: transform 0.3s; /* Smooth transform effect */
-  }
-  
-li { 
-	margin-bottom: 10px; 
-	list-style-type: none; 
-} 
-
-input, 
-select { 
-	width: calc(100% - 15px); 
-	padding: 10px; 
-	margin-bottom: 15px; 
-	border: 1px solid #9c9c9c; 
-	border-radius: 2.5rem; 
-	box-sizing: border-box; 
-	font-size: 14px; 
-} 
-
-h2, 
-h3 { 
-	margin-bottom: 20px; 
-	color: var(--black); 
-} 
-
-#cgpa { 
-	font-size: 24px; 
-	font-weight: bold; 
-	color: #4caf50; 
-} 
-
-#subjectList { 
-	text-align: left; 
-} 
-
-button.edit, 
-button.delete { 
-	padding: 8px 15px; 
-	margin-left: 5px; 
-	font-size: 12px; 
-	cursor: pointer; 
-} 
-
-button.delete { 
-	background-color: #d9534f; 
-} 
-
-.error { 
-	color: #d9534f; 
-	font-size: 16px; 
-
-} 
-
-table { 
-	width: 100%; 
-	border-collapse: collapse; 
-	margin-top: 20px; 
-	border-radius: 2.5rem;
-} 
-
-th, 
-td { 
-	border: 1px solid var(--black); 
-	padding: 8px; 
-	text-align: left; 
-	font-size: medium;
-	border-radius: 2.5rem;
-} 
-
-th { 
-	background-color: --; 
-	border-radius: 2.5rem;
-}
-
-label{
-	color: var(--black);
 }

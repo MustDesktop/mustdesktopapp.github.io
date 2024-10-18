@@ -25,16 +25,23 @@ button {
   }
   */
 
-  :root{
-	--main-color:#0059ff;
-	--red:#e74c3c;
-	--orange:#f39c12;
-	--light-color:#000000;
-	--light-bg:#eee;
-	--black:#000000;
-	--white:#ffffff;
-	--border:.1rem solid rgba(0, 0, 0, 0.2);
- }
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+
+  /* Automatic dark mode styles */
+  @media (prefers-color-scheme: dark) {
+	  :root {
+		--main-color: #0059ff;
+		  --light-color: #000000; /* Light color for text */
+		  --light-bg: #ffffff; /* Dark background */
+		  --black: #222222; /* Text color */
+		  --white: #ffffff; /* White color for elements */
+		  --border: .1rem solid rgba(255, 255, 255, 0.2); /* Light border */
+	  }
+	}
+
+  
+  /* Add the rest of your existing styles here... */
 
   button { 
 	margin-top: 15px; 
