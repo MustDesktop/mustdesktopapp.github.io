@@ -1882,3 +1882,31 @@ th {
 label{
 	color: var(--black);
 }
+
+
+
+
+.erd{
+   transition: 1s;
+   padding: 15px;
+   display: block;
+   width: 100%;
+}
+
+.erd img:hover{
+   filter: grayscale(100%);
+   transform: scale(1.1);
+}
+
+h4{
+   color: var(--black);
+}
+
+
+pre code{
+background-color: var(--light-bg);
+border: 1px solid  var(--light-border);
+display: block;
+padding: 10px;
+
+}
