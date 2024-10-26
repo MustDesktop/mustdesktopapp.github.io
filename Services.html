@@ -54,7 +54,7 @@
 
 </header>   
 
-<div class="side-bar">
+<div class="side-bar" id="side-bar">
 
    <div id="close-btn">
       <i class="fas fa-times"></i>
@@ -68,11 +68,12 @@
    </div>
 
    <nav class="navbar">
-      <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="./courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
-      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
-      <a href="projects.html"><i class="fas fa-chalkboard-user"></i><span>Projects</span></a>
-     <!-- <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a> -->
+    <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+    <a href="Services.html"><i class="fas fa-server"></i><span>Services</span></a> 
+    <a href="projects.html"><i class="fas fa-chalkboard-user"></i><span>Projects</span></a>
+    <a href="settings.html"><i class="fas fa-gear"></i><span>Settings</span></a>
+   <!-- <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a> -->
    </nav>
 
 </div>
@@ -81,7 +82,7 @@
    <section class="teachers">
 
    <form action="" method="post" class="search-tutor" onsubmit="return handleSearch();">
-      <input type="text" name="search" placeholder="search Courses..., just type and enter to show" id="search-tutor" required maxlength="100">
+      <input type="text" name="search" placeholder="search Services..., just type and enter to show" id="search-tutor" required maxlength="100">
       <button type="submit" class="fas fa-search" name="search_tutor"></button>
   </form>
   <ul id="list">
@@ -404,5 +405,20 @@ function handleSearch() {
    return false; // Prevent form from submitting the default way
 }
 </script>
+
+<!--<script>
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("side-bar").style.top = "0";
+  } else {
+    document.getElementById("side-bar").style.top = "-50px";
+  }
+}
+</script> -->
+
 </body>
 </html>
