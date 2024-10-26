@@ -50,6 +50,7 @@ html::-webkit-scrollbar-thumb{
 body{
    background-color: var(--light-bg);
    padding-left: 30rem;
+   transition: all 0.4s ease;
 }
 
 /* Automatic dark mode styles */
@@ -155,7 +156,7 @@ section {
    top:0; left:0; right: 0;
    background-color: var(--white);
    z-index: 1000;
-   border-bottom: var(--border);
+   border-bottom : var(--border);
 border-bottom-left-radius: 2.5rem;
 border-bottom-right-radius: 2.5rem;
 }
@@ -166,6 +167,7 @@ border-bottom-right-radius: 2.5rem;
    justify-content: space-between; 
    position: relative;
    padding: 1.5rem 2rem;
+   transition: all 0.4s ease;
    
 }
 
@@ -213,6 +215,7 @@ border-bottom-right-radius: 2.5rem;
    cursor: pointer;
    text-align: center;
    margin-left: .7rem;
+   
 }
 
 .header .flex .icons div:hover{
@@ -232,6 +235,7 @@ border-bottom-right-radius: 2.5rem;
    transform: scale(0);
    transition: .2s linear;
    width: 30rem;
+   transition: all 0.4s ease;
 }
 
 .header .flex .profile.active{
@@ -263,14 +267,28 @@ border-bottom-right-radius: 2.5rem;
    display: none;
 }
 
+::-webkit-scrollbar{
+   width: 5px;
+}
+::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
 .side-bar{
    position: fixed;
    top: 0; left: 0;
    width: 30rem;
    background-color: var(--white);
    height: 100vh;
-   border-right: var(--border);
+  /* border-right: var(--border); */
    z-index: 1200;
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+   transition: all 0.4s ease;
+   border-bottom-right-radius: 2.5rem;
+   
+
+   
 
 
 }
@@ -279,6 +297,7 @@ border-bottom-right-radius: 2.5rem;
    text-align: right;
    padding: 2rem;
    display: none;
+   
 }
 
 .side-bar #close-btn i{
@@ -974,6 +993,7 @@ border-bottom-right-radius: 2.5rem;
    display: flex;
    align-items: center;
    gap: 1.5rem;
+
 }
 
 .teachers .search-tutor input{
@@ -981,6 +1001,7 @@ border-bottom-right-radius: 2.5rem;
    background: none;
    font-size: 1.8rem;
    color: var(--black);
+   position: sticky;;
 }
 
 .teachers .search-tutor button{
@@ -988,6 +1009,7 @@ border-bottom-right-radius: 2.5rem;
    color: var(--black);
    cursor: pointer;
    background:none;
+   position: sticky;
 }
 
 .teachers .search-tutor button:hover{
@@ -1338,6 +1360,7 @@ border-bottom-right-radius: 2.5rem;
       transition: .2s linear;
       border-top-right-radius: 2.5rem;
       border-bottom-right-radius: 2.5rem;
+
    }
 
    .side-bar #close-btn{
@@ -1348,6 +1371,7 @@ border-bottom-right-radius: 2.5rem;
       left: 0;
       box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
       border-right: 0;
+
    }
 
 }
