@@ -14,7 +14,19 @@
 
 
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+	<style>
+		.copy-button {
+			padding: 10px 20px;
+			background-color: #007BFF;
+			color: white;
+			border: none;
+			border-radius: 30px;
+			cursor: pointer;
+		}
+		.copy-button:hover {
+			background-color: #0056b3;
+		}
+	</style>
 </head>
 <body>
 
@@ -192,6 +204,8 @@
       <img src="images/images/m-316x324.png" class="ads" alt=""> 
       <p class="tutor"></p>
       <a href="https://mustdesktop.github.io/" target="_blank" class="inline-btn">Visit our Website</a>
+	   							<p id="linkToCopy">https://virusxvsx.github.io/mustdesktop.github.io</p>
+							<button class="inline-btn" onclick="copyToClipboard()">Copy Link</button>
    </div>
 </div>
 
@@ -664,5 +678,20 @@ document.addEventListener('DOMContentLoaded', function () {
    }
    </script>
 
+
+
+
+	      <script>
+	  function copyToClipboard() {
+		  var link = document.getElementById("linkToCopy").innerText;
+		  var tempInput = document.createElement("input");
+		  tempInput.value = link;
+		  document.body.appendChild(tempInput);
+		  tempInput.select();
+		  document.execCommand("copy");
+		  document.body.removeChild(tempInput);
+		  alert("Link copied to clipboard!");
+	  }
+  </script>
 </body>
 </html>
